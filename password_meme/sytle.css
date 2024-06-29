@@ -1,0 +1,19 @@
+.main-content-wrapper {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial;
+}
+
+.entry-label-wrapper {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.entry-label {
+    text-align: center;
+    outline: none;
+    border: 0px solid;
+    size: 70px;
+    background: transparent;
+}
