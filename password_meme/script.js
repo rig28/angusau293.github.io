@@ -7,21 +7,29 @@ function takeInput() {
     var entry = document.getElementById("entry").value;
     if (stage == 1) {
         if (entry == "password") {
-            entry_label.textContent = "Try again";
+            entry_label.textContent = "Password is incorrect";
 
             stage = 2;
         } else {
             alert("Hint: Enter password.");
         }
     } else if (stage == 2) {
-        if (entry == "again") {
-            entry_label.textContent = "Try again later";
+        if (entry == "incorrect") {
+            entry_label.textContent = "Try again";
 
             stage = 3;
         } else {
-            alert("Hint: Try again.");
+            alert("Hint: Enter password.");
         }
     } else if (stage == 3) {
+        if (entry == "again") {
+            entry_label.textContent = "Try again later";
+
+            stage = 4;
+        } else {
+            alert("Hint: Try again.");
+        }
+    } else if (stage == 4) {
         if (entry == "again later") {
             window.location = "bruh.html";
         } else {
