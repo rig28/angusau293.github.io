@@ -2,7 +2,8 @@ const paramString = window.location.search;
 const searchParams = new URLSearchParams(paramString);
 
 var endPointUrl;
-const endPointUrlRaw = searchParams.get("url");
+var endPointUrlRaw;
+if (searchParams.has("url")) {endPointUrlRaw = searchParams.get("url")} else {endPointUrlRaw = ""}
 if (endPointUrlRaw[0] && endPointUrlRaw[endPointUrlRaw.length] == "\"" || "\'") {
     endPointUrl = endPointUrlRaw.substring(1, endPointUrlRaw.length - 1);
 } else {
