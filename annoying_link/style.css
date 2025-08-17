@@ -10,7 +10,7 @@ body {
     justify-self: center;
     text-align: center;
     padding: 5px;
-    margin: 50px;
+    margin: 50px auto;
     border-radius: 10px;
     border-color: color-mix(in srgb, color percentage, color percentage);
 }
@@ -26,14 +26,114 @@ body {
     top: 50px;
 }
 
+.drag {
+    display: none;
+    position: fixed;
+    resize: both;
+    overflow: auto;
+    min-width: 380px;
+    min-height: 400px;
+}
+.drag_header {
+    width: 100%;
+    background-color: gray;
+    display: flex;
+}
+.drag_header:active {
+    cursor: move;
+    user-select: none;
+}
+#url_builder {
+    top: 30px;
+    left: 30px;
+    margin: auto;
+    background-color: black;
+    color: white;
+    border-color: white;
+    border-width: 5px;
+    border-style: solid;
+}
+#win_header {
+    margin: 0;
+    padding: 10px;
+    font-family: Arial;
+}
+#win_header:not(:active) {
+    cursor: default;
+}
+#builder_close {
+    position: absolute;
+    right: 10px;
+    background-color: transparent;
+    color: red;
+    font-family: Arial;
+    font-size: 20px;
+    top: 10px;
+    border-style: none;
+    cursor: pointer;
+}
+#builder_entries {
+    padding: 10px;
+}
+label {
+    font-family: Arial;
+}
+#builder-phrases_heading {
+    font-family: Arial;
+    margin-bottom: 10px;
+}
+#builder-phrases_add_phrase {
+    margin-bottom: 10px;
+}
+#builder_build {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: lime;
+    border-style: outset;
+    border-radius: 2px;
+    border-color: green;
+}
+#builder_output {
+    margin: 10px;
+    width: 90%;
+    height: 10vh;
+}
+
 footer {
     position: absolute;
     bottom: 0;
-    background-color: rgb(255, 215, 105);
     width: 100%;
 }
-p {
-    padding: 5px;
+#creator {
+    margin: 20px;
     font-size: 20px;
     font-family: Arial;
+}
+#info {
+    font-size: 20px;
+    margin: 10px;
+    background-color: transparent;
+    border-radius: 500px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-style: solid;
+    border-color: black;
+    cursor: pointer;
+}
+#credit {
+    display: none;
+    background-color: rgb(255, 215, 105);
+}
+#create_url {
+    position: absolute;
+    margin: 20px;
+    right: 10px;
+    cursor: pointer;
+    background-color: rgb(12, 86, 146);
+    color: white;
+    font-size: 15px;
+    border-style: ridge;
 }

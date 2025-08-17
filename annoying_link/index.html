@@ -9,13 +9,46 @@
     </head>
     <body>
         <div id="container">
-            <h1 id="heading">Failed to load JavaScript, please make sure it is enabled.</h1>
-            <a id="link" href="#"></a>
+            <h1 id="heading">Failed to load JavaScript, please make sure it is enabled. Malformed URL?</h1>
+            <a id="link" href="javascript:void(0);"></a>
+        </div>
+
+        <div id="url_builder" class="drag">
+            <div id="url_builder_header" class="drag_header">
+                <h2 id="win_header">URL Builder</h2>
+                <button id="builder_close">X</button>
+            </div>
+
+            <div id="builder_entries">
+                <label for="builder-url">URL: </label>
+                <input type="url" id="builder-url" /><br>
+                <label for="builder-display_text">Display Text: </label>
+                <input type="text" id="builder-display_text" /><br>
+                <label for="builder-annoy_level">Annoyance Level: </label>
+                <input type="number" id="builder-annoy_level" min="1" value="5" /><br>
+                <label for="builder-msg">Initial Phrase: </label>
+                <input type="text" id="builder-msg" /><br>
+
+                <div id="builder-phrases">
+                    <p id="builder-phrases_heading">Phrases:</p>
+                    <button id="builder-phrases_add_phrase">+ Add Phrase</button>
+                    <br>
+                    <input type="text" class="builder-phrases_phrase" placeholder="Phrase 1" /><br>
+                </div>
+            </div>
+
+            <textarea id="builder_output" placeholder="URL will show here when built, click to copy URL to clipboard." readonly></textarea>
+
+            <button id="builder_build">Build</button>
         </div>
 
         <footer>
-            <p>Made by <a href="https://github.com/AngusAU293">HackerSploit</a> (Angus Stuart)</p>
+            <button id="info">i</button>
+            <div id="credit">
+                <p id="creator">Made by <a href="https://github.com/AngusAU293">Exec64</a></p>
+                <button id="create_url">URL Builder</button>
+            </div>
         </footer>
     </body>
-    <script src="magic.js"></script>
+    <script src="main.js"></script>
 </html>
