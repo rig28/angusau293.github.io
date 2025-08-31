@@ -148,10 +148,16 @@ class URLBuilder {
         this.url = "\"" + url.replaceAll("&", "%26") + "\"";
     }
     setParameter(name, value) {
-        this.params.push(name + "=" + value);
+        if (value != "") {
+            this.params.push(name + "=" + value);
+        }
     }
 
     build() {
+        if (this.url == "\"\"") {
+            return "ERROR: URL is required!";
+        }
+
         this.result = this.baseURL + "?url=" + this.url;
 
         for (i = 0; i < this.params.length; i++) {

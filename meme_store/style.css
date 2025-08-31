@@ -1,0 +1,37 @@
+@font-face {
+    font-family: "Consolas";
+    src: url(".meta/font/Consolas-Regular.ttf") format("truetype");
+}
+
+#header {
+    font-family: "Consolas";
+    background-color: rgba(143, 248, 170, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+}
+#pg_title {
+    margin: 10px;
+    margin-bottom: 1px;
+    font-size: 45px;
+}
+#pg_subtitle {
+    margin-top: auto;
+    margin-left: 20px;
+    font-size: 20px;
+}
+#memes {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px;
+}
+.meme {
+    padding: 10px;
+}
+.meme_img {
+    width: 200px;
+    height: auto;
+}
+.meme_title {
+    font-family: "Consolas";
+    font-size: 25px;
+}
