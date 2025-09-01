@@ -51,6 +51,10 @@ const raw_data = `[
     {
         "file": "memes/twerk.gif",
         "title": "Twerk"
+    },
+    {
+        "file": "memes/AAAAAAAAAAAAAAAA.jpg",
+        "title": "AAAAAAAAA"
     }
 ]`
 
